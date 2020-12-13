@@ -3,6 +3,43 @@
 <creatures xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="stendhal ../creatures.xsd ">
 
+  <creature name="mausoleum skeleton shieldbearer">
+    <type class="undead" subclass="skeleton_mausoleum_shieldbearer" tileid="undead_skeleton_mausoleum_guard.png:2"/>
+    <description>You see a mausoleum skeleton shieldbearer</description>
+    <attributes>
+      <atk value="233"/>
+      <def value="65"/>
+      <hp value="90"/>
+      <speed value="0.5"/>
+      <size value="1,1"/>
+    </attributes>
+    <level value="23"/>
+    <experience value="350"/>
+    <respawn value="10"/>
+    <corpse name="bone" harmless="bone" />
+    <drops>
+      <item value="money" quantity="[5,29]" probability="100.0"/>
+      <item value="skull shield" quantity="[1,1]" probability="0.5"/>
+    </drops>
+    <equips>
+    </equips>
+    <ai>
+      <says>
+        <noise state="idle follow fight" value="Thou shall NOT disturb the bones!"/>
+        <noise state="idle follow fight" value="Leave the bones alone..."/>
+        <noise state="idle follow fight" value="Thou shall NOT mess with the bones!"/>
+        <sound value="bones-2" />
+        <sound value="ghost-01"/>
+        <sound value="ghost-02"/>
+        <sound value="ghost-03"/>
+      </says>
+      <profile name="brave"/>
+      <profile name="offensive"/>
+      <profile name="human"/>
+      <profile name="patrolling"/>
+    </ai>
+  </creature>
+
   <creature name="skeleton">
     <type class="undead" subclass="skeleton" tileid="undead_skeleton.png:0"/>
     <description>You see a skeleton which survives to get revenge.</description>

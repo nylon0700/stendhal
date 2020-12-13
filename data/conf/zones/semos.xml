@@ -396,16 +396,25 @@ Unfortunately I will not be able to visit Athor this year. I have run into a bit
       <destination zone="0_semos_mountain_n2" ref="frank_house" />
       <attribute name="move.continuous" />
     </portal>
-
   </zone>
 
-  <zone name="0_semos_mountain_n2_e" level="0" x="500128" y="499744"
-    file="Level 0/semos/mountain_n2_e.tmx">
+  <!-- semos mountain cemetery mausoleum -->
+  <zone name="0_semos_mountain_n2_e" file="Level 0/semos/mountain_n2_e.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying(temperature=-1)</parameter>
     </attributes>
+    <portal x="13" y="55" ref="semos_mountain_cemetery_mausoleum_entrance">
+      <destination zone="int_semos_mountain_cemetery_mausoleum" ref="semos_mountain_cemetery_mausoleum_inside"/>
+    </portal>
 
+  </zone>
+
+  <!-- semos mountain cemetery mausoleum -->
+  <zone name="int_semos_mountain_cemetery_mausoleum" file="interiors/semos/semos_mountain_cemetery_mausoleum.tmx">
+    <portal x="32" y="175" ref="semos_mountain_cemetery_mausoleum_inside">
+        <destination zone="0_semos_mountain_n2_e" ref="semos_mountain_cemetery_mausoleum_entrance"/>     
+    </portal>
   </zone>
 
   <zone name="int_mithrilbourgh_stores" file="interiors/mithrilbourgh/stores.tmx">
