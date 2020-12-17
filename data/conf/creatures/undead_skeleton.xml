@@ -3,14 +3,51 @@
 <creatures xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="stendhal ../creatures.xsd ">
 
-  <creature name="mausoleum skeleton shieldbearer">
-    <type class="undead" subclass="skeleton_mausoleum_shieldbearer" tileid="undead_skeleton_mausoleum_guard.png:2"/>
-    <description>You see a mausoleum skeleton shieldbearer.</description>
+  <creature name="skeleton guardian spearbearer">
+    <type class="undead" subclass="skeleton_guardian_spearbearer" tileid="undead_skeleton_guardian.png:3"/>
+    <description>You see a skeleton guardian spearbearer.</description>
     <attributes>
       <atk value="150"/>
       <def value="150"/>
       <hp value="300"/>
-      <speed value="0.15"/>
+      <speed value="0.30"/>
+      <size value="1,1"/>
+    </attributes>
+    <level value="25"/>
+    <experience value="3500"/>
+    <respawn value="10"/>
+    <corpse name="bone" harmless="bone" />
+    <drops>
+      <item value="money" quantity="[500,1000]" probability="100.0"/>
+      <item value="skull shield" quantity="[1,1]" probability="0.5"/>
+    </drops>
+    <equips>
+    </equips>
+    <ai>
+      <says>
+        <noise state="idle follow fight" value="Thou shall NOT mess with the bones!"/>
+        <noise state="idle follow fight" value="Thou shall NOT disturb the bones!"/>
+        <noise state="idle follow fight" value="Leave the bones alone..."/>
+        <sound value="bones-2" />
+        <sound value="ghost-01"/>
+        <sound value="ghost-02"/>
+        <sound value="ghost-03"/>
+      </says>
+      <profile name="brave"/>
+      <profile name="offensive"/>
+      <profile name="human"/>
+      <profile name="patrolling"/>
+    </ai>
+  </creature>
+
+  <creature name="skeleton guardian shieldbearer">
+    <type class="undead" subclass="skeleton_guardian_shieldbearer" tileid="undead_skeleton_guardian.png:2"/>
+    <description>You see a skeleton guardian shieldbearer.</description>
+    <attributes>
+      <atk value="150"/>
+      <def value="150"/>
+      <hp value="300"/>
+      <speed value="0.25"/>
       <size value="1,1"/>
     </attributes>
     <level value="25"/>
